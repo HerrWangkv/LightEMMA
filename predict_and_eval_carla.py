@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Predict and Evaluate Custom Dataset")
-    parser.add_argument("--model", type=str, default="qwen2.5-72b")
+    parser.add_argument("--model", type=str, default="gemini-2.5-flash")
     parser.add_argument("--dataset_dir", type=str, required=True)
     parser.add_argument("--videos_dir", type=str, required=True)
     parser.add_argument("--output_dir", type=str, default="./output")
