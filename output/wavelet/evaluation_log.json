@@ -1,8 +1,0 @@
-{
-    "Total_Frames": 4000,
-    "Successful_Frames": 1061,
-    "Success_Rate": 0.26525,
-    "Global_ADE_avg": 2.1250552578517166,
-    "Global_FDE": 4.860737905327801,
-    "Global_missRate_2": 0.6578699340245052
-}
