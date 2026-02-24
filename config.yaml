@@ -6,7 +6,7 @@ api_keys:
   huggingface: "your-huggingface-token"  # To download models from HuggingFace
 
 model_path:
-  huggingface: "path/to/store/huggingface/models"  # directory to store downloaded models
+  huggingface: huggingface_cache  # directory to store downloaded models
 
 # Dataset
 data:
