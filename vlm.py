@@ -217,6 +217,7 @@ class ModelHandler:
         """
         try:
             import google.generativeai as genai
+            from google.generativeai.types import HarmCategory, HarmBlockThreshold
             
             gemini_api_key = self.config["api_keys"]["gemini"]
             
@@ -227,7 +228,13 @@ class ModelHandler:
             image = Image.open(image_path)
             
             # Initialize the model
-            model = genai.GenerativeModel(model_name)
+            safety_settings = {
+                HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+            }
+            model = genai.GenerativeModel(model_name, safety_settings=safety_settings)
             
             # Create a chat session which is more reliable for vision tasks
             chat = model.start_chat(history=[])
