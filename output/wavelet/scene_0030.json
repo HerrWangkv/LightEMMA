@@ -1,0 +1,380 @@
+{
+    "scene_info": {
+        "name": "scene_0030"
+    },
+    "frames": [
+        {
+            "frame_index": 0,
+            "image_name": "scene_0030_000.jpg",
+            "metrics": {
+                "ADE_1s": 1.48377282257496,
+                "ADE_2s": 4.633565048316742,
+                "ADE_3s": 6.3779164347866715,
+                "ADE_avg": 4.165084768559457,
+                "FDE": 6.3942282375066375,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(1.03, 0.0), (0.03, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 2,
+            "image_name": "scene_0030_002.jpg",
+            "metrics": {
+                "ADE_1s": 0.8126287397530347,
+                "ADE_2s": 2.764826089256089,
+                "ADE_3s": 3.5530085646506464,
+                "ADE_avg": 2.3768211312199234,
+                "FDE": 3.553699024806846,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(1.95441, 0.0), (1.56353, 0.0), (1.17265, 0.0), (0.78176, 0.0), (0.39088, 0.0), (0.00000, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 4,
+            "image_name": "scene_0030_004.jpg",
+            "metrics": {
+                "ADE_1s": 1.5695304477145786,
+                "ADE_2s": 4.48367371843282,
+                "ADE_3s": 5.187181844893685,
+                "ADE_avg": 3.7467953370136953,
+                "FDE": 5.187345876310138,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(1.420, 0.0), (0.170, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 6,
+            "image_name": "scene_0030_006.jpg",
+            "metrics": {
+                "ADE_1s": 0.6293386501857152,
+                "ADE_2s": 1.8044152262814475,
+                "ADE_3s": 1.6355898207394794,
+                "ADE_avg": 1.3564478990688806,
+                "FDE": 1.6331175596587808,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(2.51, 0.005), (2.01, 0.005), (1.51, 0.005), (1.01, 0.005), (0.51, 0.005), (0.01, 0.005)]"
+            }
+        },
+        {
+            "frame_index": 8,
+            "image_name": "scene_0030_008.jpg",
+            "metrics": {
+                "ADE_1s": 0.462012789999594,
+                "ADE_2s": 1.087168698919612,
+                "ADE_3s": 0.6672479384857399,
+                "ADE_avg": 0.7388098091349821,
+                "FDE": 0.6672555677410764,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(2.73993, 0.0), (2.19194, 0.0), (1.64396, 0.0), (1.09597, 0.0), (0.54799, 0.0), (0.00000, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 10,
+            "image_name": "scene_0030_010.jpg",
+            "metrics": {
+                "ADE_1s": 0.9023669500621834,
+                "ADE_2s": 2.0798181941870415,
+                "ADE_3s": 2.0962673002444854,
+                "ADE_avg": 1.6928174814979033,
+                "FDE": 2.0962673002444854,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(2.2558673667966564, 0.001), (1.3558673667966564, 0.001), (0.4558673667966564, 0.001), (0.0, 0.001), (0.0, 0.001), (0.0, 0.001)]"
+            }
+        },
+        {
+            "frame_index": 12,
+            "image_name": "scene_0030_012.jpg",
+            "metrics": {
+                "ADE_1s": 0.5026691436160942,
+                "ADE_2s": 0.25998610312773407,
+                "ADE_3s": 0.4027611901544154,
+                "ADE_avg": 0.38847214563274785,
+                "FDE": 0.4027611901544154,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(2.6064879397861634, 0.0), (2.0851903518289308, 0.0), (1.5638927638716982, 0.0), (1.0425951759144656, 0.0), (0.5212975879572329, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 14,
+            "image_name": "scene_0030_014.jpg",
+            "metrics": {
+                "ADE_1s": 0.29671670827004576,
+                "ADE_2s": 0.6031963004838089,
+                "ADE_3s": 1.1374902546694075,
+                "ADE_avg": 0.6791344211410874,
+                "FDE": 1.1374902546694075,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(2.672347683168996, 0.0), (2.1378781465351967, 0.0), (1.6034086099013976, 0.0), (1.0689390732675984, 0.0), (0.5344695366337992, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 16,
+            "image_name": "scene_0030_016.jpg",
+            "metrics": null,
+            "inference": {
+                "actions": " in the train of thought.\n\n1.  **Understand the Goal:** Predict the next 6 waypoints (speed and curvature) for an autonomous vehicle. The output must be exactly in the format `[(v1, c1), (v2, c2), ..., (v6, c6)]`.\n\n2.  **Extract Key Information from the Description:**\n    *   **Current Scene:** Single-lane road, dark hatchback ahead (in lane), solid yellow line (left edge), red traffic light (right), streetlights, bus stop (far left), traffic cone, brick buildings (right), low sun (hazy glow, long shadows), numerous trees. *No pedestrians.*\n    *   **Ego Vehicle Past Speed (last 3 seconds, 0.5s resolution):** `[0.25545104, 1.37741447, 2.1871939, 3.00998873, 3.10328473, 3.16014921]` m/s. The last speed (most recent) is `v_last = 3.16014921` m/s.\n    *   **Ego Vehicle Past Curvature (last 3 seconds, 0.5s resolution):** `[0, -0.012, 0.002, 0.005, 0.001, 0.0]`. The last curvature (most recent) is `c_last = 0.0` rad/m.\n    *   **High-level Driving Instructions (Crucial for Prediction):**\n        *   Ego was accelerating (speed increasing), but acceleration decreased recently (approx 0.114 m/s² in last 0.5s).\n        *   Ego was predominantly following the lane, curvature returned to 0.0 recently.\n        *   **Instruction:** \"Taking into account the red traffic light ahead and the dark hatchback directly in the lane, the ego should decelerate significantly, by approximately 1.05 m/s² on average, to come to a complete stop within the next 3 seconds, while continuing to follow the lane straight ahead.\"\n\n3.  **Process Driving Instructions:**\n    *   **Speed:**\n        *   Current speed (`v_last`) = 3.16014921 m/s.\n        *   Target state: \"come to a complete stop\" (speed = 0 m/s).\n        *   Timeframe: \"within the next 3 seconds\" (which is exactly 6 waypoints at 0.5s resolution).\n        *   Deceleration rate: \"approximately 1.05 m/s² on average\".\n        *   Let's calculate the exact constant deceleration `a` needed to stop from `v_last` in 3 seconds:\n            `a = (v_final - v_initial) / total_time`\n            `a = (0.0 - 3.16014921) / 3.0`\n            `a = -1.05338307` m/s² (This matches \"approximately 1.05 m/s²\").\n        *   Now, calculate the speed for each of the 6 waypoints using this constant deceleration:\n            `v_next = v_current + a * dt`, where `dt = 0.5` seconds.\n            `v0` (current) = 3.16014921\n            `v1 = v0 + a * 0.5 = 3.16014921 - 1.05338307 * 0.5 = 3.16014921 - 0.526691535 = 2.633457675`\n            `v2 = v1 + a * 0.5 = 2.633457675 - 0.526691535 = 2.10676614`\n            `v3 = v2 + a * 0.5 = 2.10676614 - 0.526691535 = 1.580074605`\n            `v4 = v3 + a * 0.5 = 1.580074605 - 0.526691535 = 1.05338307`\n            `v5 = v4 + a * 0.5 = 1.05338307 - 0.526691535 = 0.526691535`\n            `v6 = v5 + a * 0.5 = 0.526691535 - 0.526691535 = 0.0`\n        *   These speeds ensure a smooth deceleration to a full stop.\n\n    *   **Curvature:**\n        *   Current curvature (`c_last`) = 0.0 rad/m.\n        *   Instruction: \"while continuing to follow the lane straight ahead.\"\n        *   This means the curvature should remain 0.0 for all future waypoints.\n\n4.  **Formulate the Output:** Combine the calculated speeds and curvatures into the required format.\n\n    `v_waypoints = [2.633457675, 2.10676614, 1.580074605, 1.05338307, 0.526691535, 0.0]`\n    `c_waypoints = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]`\n\n    Final Answer Structure: `[(v1, c1), (v2, c2), (v3, c3), (v4, c4), (v5, c5), (v6, c6)]`\n\n    Double-check precision requirements. The input speeds have up to 9 decimal places. I will use similar precision for output.\n\n    Let's re-calculate using the provided `v_last` with full precision:\n    `v_curr = 3.1601492092119057`\n    `a = (0 - v_curr) / 3.0 = -1.0533830697373019`\n\n    `v1 = v_curr + a * 0.5 = 3.1601492092119057 - 1.0533830697373019 * 0.5 = 2.633457674343255`\n    `v2 = v1 + a * 0.5 = 2.633457674343255 - 1.0533830697373019 * 0.5 = 2.106766139474604`\n    `v3 = v2 + a * 0.5 = 2.106766139474604 - 1.0533830697373019 * 0.5 = 1.580074604605953`\n    `v4 = v3 + a * 0.5 = 1.580074604605953 - 1.0533830697373019 * 0.5 = 1.053383069737302`\n    `v5 = v4 + a * 0.5 = 1.053383069737302 - 1.0533830697373019 * 0.5 = 0.526691534868651`\n    `v6 = v5 + a * 0.5 = 0.526691534868651 - 1.0533830697373019 * 0.5 = 0.0` (due to floating point arithmetic, it might be a very small number like `1e-16`, but it should be 0). I will explicitly set it to 0.0 if it's within a tiny epsilon.\n\n    The curvature values are straightforward: `0.0` for all 6 waypoints.\n\n    Constraints check:\n    *   Physical constraints: A deceleration of ~1.05 m/s² is well within comfortable braking limits for a passenger vehicle. Maintaining 0.0 curvature is also physically sound for straight-line driving. Speeds remain non-negative and stop at 0.\n    *   Format check: Exactly 6 pairs, `(v, c)` format.\n[(2.633457674343255, 0.0), (2.106766139474604, 0.0), (1.580074604605953, 0.0), (1.053383069737302, 0.0), (0.526691534868651, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 18,
+            "image_name": "scene_0030_018.jpg",
+            "metrics": {
+                "ADE_1s": 0.36268217346367215,
+                "ADE_2s": 1.5267187126398523,
+                "ADE_3s": 1.7967109109300365,
+                "ADE_avg": 1.2287039323445204,
+                "FDE": 1.7967109109300365,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(2.56, 0.0), (1.96, 0.0), (1.36, 0.0), (0.76, 0.0), (0.16, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 20,
+            "image_name": "scene_0030_020.jpg",
+            "metrics": {
+                "ADE_1s": 0.8581858432143386,
+                "ADE_2s": 2.399736071072412,
+                "ADE_3s": 2.9277360371307717,
+                "ADE_avg": 2.0618859838058405,
+                "FDE": 2.930986036970167,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(2.588, 0.0), (2.073, 0.0), (1.558, 0.0), (1.043, 0.0), (0.528, 0.0), (0.013, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 22,
+            "image_name": "scene_0030_022.jpg",
+            "metrics": {
+                "ADE_1s": 0.8175262030839193,
+                "ADE_2s": 1.8947802036878056,
+                "ADE_3s": 2.254080201401836,
+                "ADE_avg": 1.65546220272452,
+                "FDE": 2.254080201401836,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(1.7966, 0.0), (1.4373, 0.0), (1.0780, 0.0), (0.7186, 0.0), (0.3593, 0.0), (0.0000, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 24,
+            "image_name": "scene_0030_024.jpg",
+            "metrics": {
+                "ADE_1s": 0.5364051300609035,
+                "ADE_2s": 1.0996434675396491,
+                "ADE_3s": 1.2874459673488292,
+                "ADE_avg": 0.9744981883164607,
+                "FDE": 1.2874459673488292,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.93902, 0.0), (0.75121, 0.0), (0.56341, 0.0), (0.37561, 0.0), (0.18780, 0.0), (0.00000, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 26,
+            "image_name": "scene_0030_026.jpg",
+            "metrics": {
+                "ADE_1s": 0.001895904541015625,
+                "ADE_2s": 0.0019226074218750002,
+                "ADE_3s": 0.0019226074218750002,
+                "ADE_avg": 0.0019137064615885417,
+                "FDE": 0.0019226074218750002,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 28,
+            "image_name": "scene_0030_028.jpg",
+            "metrics": {
+                "ADE_1s": 0.00072479248046875,
+                "ADE_2s": 0.0007324218749999999,
+                "ADE_3s": 0.0007324218749999999,
+                "ADE_avg": 0.0007298787434895834,
+                "FDE": 0.0007324218749999999,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 30,
+            "image_name": "scene_0030_030.jpg",
+            "metrics": {
+                "ADE_1s": 0.0001373291015625,
+                "ADE_2s": 0.0001373291015625,
+                "ADE_3s": 0.0001373291015625,
+                "ADE_avg": 0.0001373291015625,
+                "FDE": 0.0001373291015625,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 32,
+            "image_name": "scene_0030_032.jpg",
+            "metrics": {
+                "ADE_1s": 3.0517578125e-05,
+                "ADE_2s": 3.0517578125e-05,
+                "ADE_3s": 3.0517578125e-05,
+                "ADE_avg": 3.0517578125e-05,
+                "FDE": 3.0517578125e-05,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 34,
+            "image_name": "scene_0030_034.jpg",
+            "metrics": {
+                "ADE_1s": 7.62939453125e-06,
+                "ADE_2s": 7.62939453125e-06,
+                "ADE_3s": 7.62939453125e-06,
+                "ADE_avg": 7.62939453125e-06,
+                "FDE": 7.62939453125e-06,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 36,
+            "image_name": "scene_0030_036.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 38,
+            "image_name": "scene_0030_038.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 40,
+            "image_name": "scene_0030_040.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 42,
+            "image_name": "scene_0030_042.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 44,
+            "image_name": "scene_0030_044.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 46,
+            "image_name": "scene_0030_046.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0)]"
+            }
+        },
+        {
+            "frame_index": 48,
+            "image_name": "scene_0030_048.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        }
+    ],
+    "scene_metrics": {
+        "ADE_avg": 0.8778230150724715,
+        "FDE": 1.2226757763797396,
+        "missRate_2": 0.25
+    }
+}
