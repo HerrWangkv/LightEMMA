@@ -15,6 +15,7 @@ def parse_args():
     parser.add_argument("--dataset_dir", type=str, required=True)
     parser.add_argument("--videos_dir", type=str, required=True)
     parser.add_argument("--output_dir", type=str, default="./output")
+    parser.add_argument("--exp_name", type=str,required=True)
     parser.add_argument("--scene", type=str, default=None)
     parser.add_argument("--error_handling", action="store_true")
     return parser.parse_args()
@@ -43,11 +44,13 @@ def run_pipeline():
     model_handler = ModelHandler(args.model, config)
     model_handler.initialize_model()
     
-    timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    results_dir = os.path.join(args.output_dir, f"{args.model}_{timestamp}")
+    results_dir = os.path.join(args.output_dir, args.exp_name)
     frames_out_dir = os.path.join(results_dir, "extracted_frames")
     os.makedirs(results_dir, exist_ok=True)
     os.makedirs(frames_out_dir, exist_ok=True)
+
+    existing_files = [f for f in os.listdir(results_dir) if f.endswith('.json')]
+    processed_scenes = [f.replace('.json', '') for f in existing_files if f != "evaluation_log.json"]
     
     videos = [v for v in sorted(os.listdir(args.videos_dir)) if v.endswith('.mp4')]
     if args.scene: videos = [v for v in videos if args.scene in v]
@@ -56,6 +59,9 @@ def run_pipeline():
     
     for video_file in videos:
         scene_name = video_file.split('.')[0]
+        if scene_name in processed_scenes:
+            print(f"Skip: {scene_name}")
+            continue
         scene_meas_dir = os.path.join(args.dataset_dir, scene_name, "measurements")
         
         if not os.path.exists(scene_meas_dir): raise FileNotFoundError(f"Measurements directory not found for scene: {scene_name}")
