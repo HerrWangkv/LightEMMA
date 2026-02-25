@@ -1,0 +1,387 @@
+{
+    "scene_info": {
+        "name": "scene_0047"
+    },
+    "frames": [
+        {
+            "frame_index": 0,
+            "image_name": "scene_0047_000.jpg",
+            "metrics": {
+                "ADE_1s": 7.62939453125e-06,
+                "ADE_2s": 7.62939453125e-06,
+                "ADE_3s": 7.62939453125e-06,
+                "ADE_avg": 7.62939453125e-06,
+                "FDE": 7.62939453125e-06,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 2,
+            "image_name": "scene_0047_002.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 4,
+            "image_name": "scene_0047_004.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 6,
+            "image_name": "scene_0047_006.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 8,
+            "image_name": "scene_0047_008.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 10,
+            "image_name": "scene_0047_010.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 12,
+            "image_name": "scene_0047_012.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 14,
+            "image_name": "scene_0047_014.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 16,
+            "image_name": "scene_0047_016.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 18,
+            "image_name": "scene_0047_018.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 20,
+            "image_name": "scene_0047_020.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 22,
+            "image_name": "scene_0047_022.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 24,
+            "image_name": "scene_0047_024.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 26,
+            "image_name": "scene_0047_026.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 28,
+            "image_name": "scene_0047_028.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 30,
+            "image_name": "scene_0047_030.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 32,
+            "image_name": "scene_0047_032.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 34,
+            "image_name": "scene_0047_034.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 36,
+            "image_name": "scene_0047_036.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 38,
+            "image_name": "scene_0047_038.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 40,
+            "image_name": "scene_0047_040.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 42,
+            "image_name": "scene_0047_042.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 44,
+            "image_name": "scene_0047_044.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 46,
+            "image_name": "scene_0047_046.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        },
+        {
+            "frame_index": 48,
+            "image_name": "scene_0047_048.jpg",
+            "metrics": {
+                "ADE_1s": 0.0,
+                "ADE_2s": 0.0,
+                "ADE_3s": 0.0,
+                "ADE_avg": 0.0,
+                "FDE": 0.0,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0), (0.0, 0)]"
+            }
+        }
+    ],
+    "scene_metrics": {
+        "ADE_avg": 3.0517578125e-07,
+        "FDE": 3.0517578125e-07,
+        "missRate_2": 0.0
+    }
+}

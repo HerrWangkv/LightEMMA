@@ -17,15 +17,27 @@ def summarize_final_comparison(root_output_dir):
 
     # 表格显示的指标 vs 底部统计的指标
     table_metrics = ["ADE_1s", "FDE"]
-    all_metrics = ["ADE_1s", "ADE_2s", "ADE_3s", "FDE"]
+    all_metrics = ["ADE_1s", "ADE_2s", "ADE_3s", "ADE_avg", "FDE"]
     folder_names = [os.path.basename(f) for f in valid_folders]
     
-    # 2. 统计并对齐场景
-    all_scenes = set()
+    # 2. 统计并对齐场景：仅保留所有文件夹中都存在的共同场景 (Common Scenes)
+    common_scenes = None
     for folder in valid_folders:
         files = glob.glob(os.path.join(folder, "scene_*.json"))
-        all_scenes.update([os.path.basename(f).replace(".json", "") for f in files])
-    sorted_scenes = sorted(list(all_scenes))
+        scenes_in_folder = set([os.path.basename(f).replace(".json", "") for f in files])
+        
+        if common_scenes is None:
+            common_scenes = scenes_in_folder
+        else:
+            common_scenes &= scenes_in_folder  # 取交集
+
+    sorted_scenes = sorted(list(common_scenes))
+    
+    if not sorted_scenes:
+        print("警告：各文件夹之间没有共同场景，无法进行公平对比。")
+        return
+
+    print(f"检测到 {len(sorted_scenes)} 个共同场景，开始进行公平对比评估...\n")
 
     # 3. 打印主对比表格 (仅显示 ADE_1s 和 FDE)
     col_width = 12
@@ -87,9 +99,9 @@ def summarize_final_comparison(root_output_dir):
 
     # 4. 底部输出：每个文件夹的所有 4 个指标总平均值
     print("\nFULL EXPERIMENT SUMMARY (Global Averages)")
-    print("-" * 85)
-    print(f"{'Folder Name':<35} | {'ADE_1s':<10} | {'ADE_2s':<10} | {'ADE_3s':<10} | {'FDE':<10}")
-    print("-" * 85)
+    print("-" * 100)
+    print(f"{'Folder Name':<35} | {'ADE_1s':<10} | {'ADE_2s':<10} | {'ADE_3s':<10} | {'ADE_avg':<10}| {'FDE':<10}")
+    print("-" * 100)
     for folder in valid_folders:
         name = os.path.basename(folder)
         summary_row = f"{name[:35]:<35} |"
@@ -98,7 +110,7 @@ def summarize_final_comparison(root_output_dir):
             avg = f"{np.mean(vals):.4f}" if vals else "N/A"
             summary_row += f" {avg:<10} |"
         print(summary_row)
-    print("-" * 85)
+    print("-" * 100)
 
 if __name__ == "__main__":
     # 默认路径为当前目录下的 output 文件夹

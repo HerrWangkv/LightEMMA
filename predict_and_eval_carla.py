@@ -16,7 +16,7 @@ def parse_args():
     parser.add_argument("--videos_dir", type=str, required=True)
     parser.add_argument("--output_dir", type=str, default="./output")
     parser.add_argument("--exp_name", type=str,required=True)
-    parser.add_argument("--scene", type=str, default=None)
+    parser.add_argument("--scene", type=str, default=[f"scene_{i:04d}" for i in range(60)], nargs="+")
     parser.add_argument("--error_handling", action="store_true")
     return parser.parse_args()
 
@@ -53,7 +53,7 @@ def run_pipeline():
     processed_scenes = [f.replace('.json', '') for f in existing_files if f != "evaluation_log.json"]
     
     videos = [v for v in sorted(os.listdir(args.videos_dir)) if v.endswith('.mp4')]
-    if args.scene: videos = [v for v in videos if args.scene in v]
+    if args.scene: videos = [v for v in videos if any(scene in v for scene in args.scene)]
     
     global_metrics = {"ADE_avg": [], "FDE": [], "missRate_2": [], "frames_total": 0, "frames_success": 0}
     
