@@ -16,7 +16,7 @@ def summarize_final_comparison(root_output_dir):
         return
 
     # 表格显示的指标 vs 底部统计的指标
-    table_metrics = ["ADE_1s", "FDE"]
+    table_metrics = ["ADE_avg", "FDE"]
     all_metrics = ["ADE_1s", "ADE_2s", "ADE_3s", "ADE_avg", "FDE"]
     folder_names = [os.path.basename(f) for f in valid_folders]
     
@@ -39,7 +39,7 @@ def summarize_final_comparison(root_output_dir):
 
     print(f"检测到 {len(sorted_scenes)} 个共同场景，开始进行公平对比评估...\n")
 
-    # 3. 打印主对比表格 (仅显示 ADE_1s 和 FDE)
+    # 3. 打印主对比表格 (仅显示 ADE_avg 和 FDE)
     col_width = 12
     scene_col_width = 20
     group_width = (col_width + 3) * len(valid_folders) - 1
