@@ -102,15 +102,44 @@ def summarize_final_comparison(root_output_dir):
     print("-" * 100)
     print(f"{'Folder Name':<35} | {'ADE_1s':<10} | {'ADE_2s':<10} | {'ADE_3s':<10} | {'ADE_avg':<10}| {'FDE':<10}")
     print("-" * 100)
+
+    # Store global averages for comparison
+    global_avgs = {}
     for folder in valid_folders:
         name = os.path.basename(folder)
-        summary_row = f"{name[:35]:<35} |"
+        global_avgs[name] = {}
         for m_key in all_metrics:
             vals = folder_stats[folder][m_key]
-            avg = f"{np.mean(vals):.4f}" if vals else "N/A"
+            global_avgs[name][m_key] = np.mean(vals) if vals else None
+
+        summary_row = f"{name[:35]:<35} |"
+        for m_key in all_metrics:
+            avg_val = global_avgs[name][m_key]
+            avg = f"{avg_val:.4f}" if avg_val is not None else "N/A"
             summary_row += f" {avg:<10} |"
         print(summary_row)
     print("-" * 100)
+
+    # 5. Relative metrics w.r.t. carla
+    if "carla" in global_avgs:
+        carla_avgs = global_avgs["carla"]
+        print("\nRELATIVE METRICS W.R.T. CARLA (lower is better, %)")
+        print("-" * 100)
+        print(f"{'Folder Name':<35} | {'ADE_1s':<10} | {'ADE_2s':<10} | {'ADE_3s':<10} | {'ADE_avg':<10}| {'FDE':<10}")
+        print("-" * 100)
+        for name, avgs in global_avgs.items():
+            if name == "carla":
+                continue
+            summary_row = f"{name[:35]:<35} |"
+            for m_key in all_metrics:
+                if avgs[m_key] is not None and carla_avgs[m_key] is not None and carla_avgs[m_key] != 0:
+                    rel = (avgs[m_key] - carla_avgs[m_key]) / carla_avgs[m_key] * 100
+                    rel_str = f"{rel:+.2f}%"
+                else:
+                    rel_str = "N/A"
+                summary_row += f" {rel_str:<10} |"
+            print(summary_row)
+        print("-" * 100)
 
 if __name__ == "__main__":
     # 默认路径为当前目录下的 output 文件夹
