@@ -2,3 +2,4 @@ __pycache__
 huggingface_cache/
 reprojected_videos/
 config.yaml
+*_frames

@@ -1,0 +1,380 @@
+{
+    "scene_info": {
+        "name": "scene_0037"
+    },
+    "frames": [
+        {
+            "frame_index": 0,
+            "image_name": "scene_0037_000.jpg",
+            "metrics": {
+                "ADE_1s": 1.2189819444159022,
+                "ADE_2s": 2.9991339177699765,
+                "ADE_3s": 2.5482574591297342,
+                "ADE_avg": 2.2554577737718713,
+                "FDE": 2.063103046614955,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(6.82, 0.085), (7.27, 0.086), (7.67, 0.087), (8.07, 0.088), (8.42, 0.089), (8.77, 0.090)]"
+            }
+        },
+        {
+            "frame_index": 2,
+            "image_name": "scene_0037_002.jpg",
+            "metrics": {
+                "ADE_1s": 1.5624027989318219,
+                "ADE_2s": 4.313660299191071,
+                "ADE_3s": 5.7754318992121165,
+                "ADE_avg": 3.8838316657783363,
+                "FDE": 6.398493950809037,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.240, 0.075), (9.490, 0.072), (10.740, 0.070), (11.990, 0.070), (13.240, 0.070), (14.490, 0.070)]"
+            }
+        },
+        {
+            "frame_index": 4,
+            "image_name": "scene_0037_004.jpg",
+            "metrics": null,
+            "inference": {
+                "actions": "The ego vehicle's current state is a speed of 7.531 m/s and a curvature of 0.078. The high-level instructions are to accelerate by approximately 1.5 m/s² and to continue turning left by approximately 0.09, maintaining the curve indicated by the road and guardrail.\n\nLet's calculate the predicted speed and curvature for the next 6 waypoints, with a 0.5-second resolution.\n\n**1. Speed Prediction:**\nThe ego vehicle should accelerate at approximately 1.5 m/s².\n`v_new = v_old + acceleration * dt`\nWhere `dt = 0.5 s`.\n\n*   **v1:** 7.531 + 1.5 * 0.5 = 7.531 + 0.75 = 8.281 m/s\n*   **v2:** 8.281 + 1.5 * 0.5 = 8.281 + 0.75 = 9.031 m/s\n*   **v3:** 9.031 + 1.5 * 0.5 = 9.031 + 0.75 = 9.781 m/s\n*   **v4:** 9.781 + 1.5 * 0.5 = 9.781 + 0.75 = 10.531 m/s\n*   **v5:** 10.531 + 1.5 * 0.5 = 10.531 + 0.75 = 11.281 m/s\n*   **v6:** 11.281 + 1.5 * 0.5 = 11.281 + 0.75 = 12.031 m/s\n\n**2. Curvature Prediction:**\nThe instruction is to \"continue turning left by approximately 0.09, maintaining the curve indicated by the road and guardrail.\" This suggests a target curvature of around 0.09. However, the prediction must obey physical constraints. As speed increases, maintaining a constant curvature would lead to excessive lateral acceleration (`a_lat = v^2 * c`), which is unsafe.\n\nWe will assume a maximum comfortable/safe lateral acceleration (`a_lat_max`) of 6.0 m/s². This value balances the instruction to gain speed with the need for safety.\nTherefore, the curvature at each waypoint will be `c = min(target_curvature, a_lat_max / v^2)`. The target curvature derived from the instruction is 0.09.\n\n*   **c0 (current):** 0.078 (Current lateral acceleration: `(7.531)^2 * 0.078 = 4.42 m/s²`, which is within limits.)\n\n*   **c1 (at v1 = 8.281 m/s):**\n    `c_limit = 6.0 / (8.281)^2 = 6.0 / 68.575 = 0.08749`\n    `c1 = min(0.09, 0.08749) = 0.087` (rounded to 3 decimal places).\n    This increases the curvature slightly from 0.078 towards 0.09, as instructed, but caps it to maintain safe lateral acceleration.\n    (Lateral acceleration: `(8.281)^2 * 0.087 = 6.00 m/s²`)\n\n*   **c2 (at v2 = 9.031 m/s):**\n    `c_limit = 6.0 / (9.031)^2 = 6.0 / 81.56 = 0.07360`\n    `c2 = min(0.09, 0.07360) = 0.074`.\n    (Lateral acceleration: `(9.031)^2 * 0.074 = 6.03 m/s²`)\n\n*   **c3 (at v3 = 9.781 m/s):**\n    `c_limit = 6.0 / (9.781)^2 = 6.0 / 95.66 = 0.06272`\n    `c3 = min(0.09, 0.06272) = 0.063`.\n    (Lateral acceleration: `(9.781)^2 * 0.063 = 6.03 m/s²`)\n\n*   **c4 (at v4 = 10.531 m/s):**\n    `c_limit = 6.0 / (10.531)^2 = 6.0 / 110.89 = 0.05411`\n    `c4 = min(0.09, 0.05411) = 0.054`.\n    (Lateral acceleration: `(10.531)^2 * 0.054 = 5.99 m/s²`)\n\n*   **c5 (at v5 = 11.281 m/s):**\n    `c_limit = 6.0 / (11.281)^2 = 6.0 / 127.26 = 0.04715`\n    `c5 = min(0.09, 0.04715) = 0.047`.\n    (Lateral acceleration: `(11.281)^2 * 0.047 = 5.98 m/s²`)\n\n*   **c6 (at v6 = 12.031 m/s):**\n    `c_limit = 6.0 / (12.031)^2 = 6.0 / 144.74 = 0.04146`\n    `c6 = min(0.09, 0.04146) = 0.041`.\n    (Lateral acceleration: `(12.031)^2 * 0.041 = 5.94 m/s²`)\n\nThis approach ensures that the vehicle accelerates as instructed, while safely managing the curvature to prevent exceeding a reasonable lateral acceleration limit. The curvature initially slightly increases from the current value towards the instructed 0.09, then progressively decreases as speed builds up to maintain safety.\n\n[(8.281, 0.087), (9.031, 0.074), (9.781, 0.063), (10.531, 0.054), (11.281, 0.047), (12.031, 0.041)]"
+            }
+        },
+        {
+            "frame_index": 6,
+            "image_name": "scene_0037_006.jpg",
+            "metrics": {
+                "ADE_1s": 1.628759498165636,
+                "ADE_2s": 2.835202034983072,
+                "ADE_3s": 6.468043197246944,
+                "ADE_avg": 3.644001576798551,
+                "FDE": 8.91654806187695,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.766, 0.08), (9.516, 0.082), (10.266, 0.084), (11.016, 0.086), (11.766, 0.088), (12.516, 0.09)]"
+            }
+        },
+        {
+            "frame_index": 8,
+            "image_name": "scene_0037_008.jpg",
+            "metrics": {
+                "ADE_1s": 1.6206306051998034,
+                "ADE_2s": 2.7534739459484037,
+                "ADE_3s": 8.572739152378016,
+                "ADE_avg": 4.315614567842075,
+                "FDE": 11.335609984279053,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.911, 0.083), (9.661, 0.081), (10.411, 0.080), (11.161, 0.080), (11.911, 0.080), (12.661, 0.080)]"
+            }
+        },
+        {
+            "frame_index": 10,
+            "image_name": "scene_0037_010.jpg",
+            "metrics": {
+                "ADE_1s": 1.1882743981599628,
+                "ADE_2s": 1.0288375534055076,
+                "ADE_3s": 5.709641400649637,
+                "ADE_avg": 2.6422511174050363,
+                "FDE": 7.770000652211787,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(7.933160910429213, 0.084), (7.933160910429213, 0.084), (7.933160910429213, 0.084), (7.933160910429213, 0.084), (7.933160910429213, 0.084), (7.933160910429213, 0.084)]"
+            }
+        },
+        {
+            "frame_index": 12,
+            "image_name": "scene_0037_012.jpg",
+            "metrics": {
+                "ADE_1s": 0.9944020830808671,
+                "ADE_2s": 1.916534994725442,
+                "ADE_3s": 8.596389280326253,
+                "ADE_avg": 3.835775452710854,
+                "FDE": 10.970680193227114,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(7.55, 0.091), (7.45, 0.093), (7.35, 0.095), (7.30, 0.096), (7.25, 0.097), (7.25, 0.098)]"
+            }
+        },
+        {
+            "frame_index": 14,
+            "image_name": "scene_0037_014.jpg",
+            "metrics": {
+                "ADE_1s": 0.6597496259133586,
+                "ADE_2s": 2.9010459227782084,
+                "ADE_3s": 11.088497960592857,
+                "ADE_avg": 4.883097836428142,
+                "FDE": 13.75787552746572,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(7.6738, 0.094), (7.5738, 0.095), (7.4738, 0.096), (7.3738, 0.097), (7.2738, 0.098), (7.1738, 0.099)]"
+            }
+        },
+        {
+            "frame_index": 16,
+            "image_name": "scene_0037_016.jpg",
+            "metrics": {
+                "ADE_1s": 0.5227763588303895,
+                "ADE_2s": 4.34594703891046,
+                "ADE_3s": 13.001946294994616,
+                "ADE_avg": 5.956889897578488,
+                "FDE": 15.71014625184393,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(7.701, 0.095), (7.451, 0.095), (7.201, 0.095), (6.951, 0.095), (6.701, 0.095), (6.451, 0.095)]"
+            }
+        },
+        {
+            "frame_index": 18,
+            "image_name": "scene_0037_018.jpg",
+            "metrics": {
+                "ADE_1s": 0.8274683849007776,
+                "ADE_2s": 7.143455511665413,
+                "ADE_3s": 20.035512477577,
+                "ADE_avg": 9.335478791381064,
+                "FDE": 23.9536376225576,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.30, 0.107), (8.55, 0.107), (8.80, 0.107), (9.05, 0.107), (9.30, 0.107), (9.55, 0.107)]"
+            }
+        },
+        {
+            "frame_index": 20,
+            "image_name": "scene_0037_020.jpg",
+            "metrics": {
+                "ADE_1s": 0.9261210310358188,
+                "ADE_2s": 5.65115310855978,
+                "ADE_3s": 16.21830475646039,
+                "ADE_avg": 7.598526298685331,
+                "FDE": 19.686822518533994,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.687811141964088, 0.06), (9.437811141964088, 0.06), (10.187811141964088, 0.06), (10.937811141964088, 0.06), (11.687811141964088, 0.06), (12.437811141964088, 0.06)]"
+            }
+        },
+        {
+            "frame_index": 22,
+            "image_name": "scene_0037_022.jpg",
+            "metrics": {
+                "ADE_1s": 0.3056651111887061,
+                "ADE_2s": 2.2096995580698895,
+                "ADE_3s": 6.53393708318524,
+                "ADE_avg": 3.016433917481278,
+                "FDE": 8.010817610405018,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.08726, 0.03), (8.33726, 0.03), (8.58726, 0.03), (8.83726, 0.03), (9.08726, 0.03), (9.33726, 0.03)]"
+            }
+        },
+        {
+            "frame_index": 24,
+            "image_name": "scene_0037_024.jpg",
+            "metrics": {
+                "ADE_1s": 0.46294925472737475,
+                "ADE_2s": 1.647326147637466,
+                "ADE_3s": 2.1218602192853133,
+                "ADE_avg": 1.4107118738833846,
+                "FDE": 2.0523487569638292,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.356, 0.010), (8.856, 0.005), (9.356, 0.000), (9.856, 0.000), (10.356, 0.000), (10.856, 0.000)]"
+            }
+        },
+        {
+            "frame_index": 26,
+            "image_name": "scene_0037_026.jpg",
+            "metrics": {
+                "ADE_1s": 0.5053029649573721,
+                "ADE_2s": 1.467517178797483,
+                "ADE_3s": 1.3491123971354173,
+                "ADE_avg": 1.1073108469634243,
+                "FDE": 1.0972018311384726,
+                "missRate_2": 0.0
+            },
+            "inference": {
+                "actions": "[(8.4230, 0.004), (8.9230, 0.002), (9.4230, 0.000), (9.9230, 0.000), (10.4230, 0.000), (10.9230, 0.000)]"
+            }
+        },
+        {
+            "frame_index": 28,
+            "image_name": "scene_0037_028.jpg",
+            "metrics": {
+                "ADE_1s": 0.7574589514143296,
+                "ADE_2s": 2.1852044036698257,
+                "ADE_3s": 2.757221805117188,
+                "ADE_avg": 1.8999617200671146,
+                "FDE": 2.7438336633273757,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.6895, 0.000), (9.4395, 0.000), (10.1895, 0.000), (10.9395, 0.000), (11.6895, 0.000), (12.4395, 0.000)]"
+            }
+        },
+        {
+            "frame_index": 30,
+            "image_name": "scene_0037_030.jpg",
+            "metrics": {
+                "ADE_1s": 0.2889254499544687,
+                "ADE_2s": 0.22458196958596932,
+                "ADE_3s": 1.8975537676768481,
+                "ADE_avg": 0.803687062405762,
+                "FDE": 2.6394139927316353,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.257, 0.001), (8.607, 0.000), (8.957, 0.000), (9.307, 0.000), (9.657, 0.000), (10.007, 0.000)]"
+            }
+        },
+        {
+            "frame_index": 32,
+            "image_name": "scene_0037_032.jpg",
+            "metrics": {
+                "ADE_1s": 0.11628661866333927,
+                "ADE_2s": 1.5657101063903687,
+                "ADE_3s": 5.49524577539991,
+                "ADE_avg": 2.3924141668178724,
+                "FDE": 6.76969392674732,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(7.96, 0.001), (8.035, 0.001), (8.11, 0.001), (8.185, 0.001), (8.26, 0.001), (8.335, 0.001)]"
+            }
+        },
+        {
+            "frame_index": 34,
+            "image_name": "scene_0037_034.jpg",
+            "metrics": {
+                "ADE_1s": 0.3001335156107812,
+                "ADE_2s": 2.358037540193959,
+                "ADE_3s": 6.98587582565931,
+                "ADE_avg": 3.2146822938213497,
+                "FDE": 8.420835595417772,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(7.927, 0.0), (7.961, 0.0), (7.994, 0.0), (8.027, 0.0), (8.061, 0.0), (8.094, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 36,
+            "image_name": "scene_0037_036.jpg",
+            "metrics": {
+                "ADE_1s": 0.08464432208717679,
+                "ADE_2s": 1.112701354110549,
+                "ADE_3s": 3.8050264560644482,
+                "ADE_avg": 1.6674573774207246,
+                "FDE": 4.621326167175669,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.471241059631029, 0.001), (8.971241059631029, 0.001), (9.471241059631029, 0.001), (9.971241059631029, 0.001), (10.471241059631029, 0.001), (10.971241059631029, 0.001)]"
+            }
+        },
+        {
+            "frame_index": 38,
+            "image_name": "scene_0037_038.jpg",
+            "metrics": {
+                "ADE_1s": 0.3563973709068976,
+                "ADE_2s": 2.512645975371221,
+                "ADE_3s": 6.663052989351245,
+                "ADE_avg": 3.1773654452097877,
+                "FDE": 7.8999601527592604,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(8.4646, 0.0), (8.7146, 0.0), (8.9646, 0.0), (9.2146, 0.0), (9.4646, 0.0), (9.7146, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 40,
+            "image_name": "scene_0037_040.jpg",
+            "metrics": {
+                "ADE_1s": 0.17763089956231554,
+                "ADE_2s": 1.7721076344772775,
+                "ADE_3s": 4.758785642919872,
+                "ADE_avg": 2.236174725653155,
+                "FDE": 5.6622216546677135,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(9.061676691938517, 0.0), (9.561676691938517, 0.0), (10.061676691938517, 0.0), (10.561676691938517, 0.0), (11.061676691938517, 0.0), (11.561676691938517, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 42,
+            "image_name": "scene_0037_042.jpg",
+            "metrics": {
+                "ADE_1s": 0.3074735006350356,
+                "ADE_2s": 2.277787463861888,
+                "ADE_3s": 5.718936990675763,
+                "ADE_avg": 2.768065985057562,
+                "FDE": 6.76325407897914,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(9.38667, 0.001), (9.80334, 0.001), (10.22000, 0.001), (10.63667, 0.001), (11.05334, 0.001), (11.47000, 0.001)]"
+            }
+        },
+        {
+            "frame_index": 44,
+            "image_name": "scene_0037_044.jpg",
+            "metrics": {
+                "ADE_1s": 0.6898170118610173,
+                "ADE_2s": 3.718342662495208,
+                "ADE_3s": 8.822249912705018,
+                "ADE_avg": 4.4101365290204155,
+                "FDE": 10.356320376555553,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(9.493, 0.0), (9.577, 0.0), (9.660, 0.0), (9.743, 0.0), (9.827, 0.0), (9.910, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 46,
+            "image_name": "scene_0037_046.jpg",
+            "metrics": {
+                "ADE_1s": 0.18228804290623452,
+                "ADE_2s": 1.3129757474790347,
+                "ADE_3s": 3.1693834419110765,
+                "ADE_avg": 1.5548824107654486,
+                "FDE": 3.7113037098485817,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(10.513373796030262, 0.0), (11.263373796030262, 0.0), (12.013373796030262, 0.0), (12.763373796030262, 0.0), (13.513373796030262, 0.0), (14.263373796030262, 0.0)]"
+            }
+        },
+        {
+            "frame_index": 48,
+            "image_name": "scene_0037_048.jpg",
+            "metrics": {
+                "ADE_1s": 0.6371883546579902,
+                "ADE_2s": 2.952171138860738,
+                "ADE_3s": 6.772586449768967,
+                "ADE_avg": 3.4539819810958985,
+                "FDE": 7.897078941214063,
+                "missRate_2": 1.0
+            },
+            "inference": {
+                "actions": "[(10.633, 0.0), (10.967, 0.0), (11.300, 0.0), (11.633, 0.0), (11.967, 0.0), (12.300, 0.0)]"
+            }
+        }
+    ],
+    "scene_metrics": {
+        "ADE_avg": 3.3943413047517885,
+        "FDE": 8.300355344472981,
+        "missRate_2": 0.9583333333333334
+    }
+}
